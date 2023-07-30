@@ -61,14 +61,14 @@ function Navbar() {
             All Category
             <ChevronDownIcon className="h-3 w-3" />
             {isdropdown && (
-              <div className="absolute w-[200px] justify-normal p-2 bg-white text-slate-900 -translate-x-3 z-10 translate-y-16 rounded-md">
+              <div className="absolute w-[200px] p-2 bg-white text-slate-900 -translate-x-3 z-10 translate-y-20 rounded-md items-center justify-center">
                 <Link to="/">
-                  <p className="m-2 hover:text-yellow-600">
+                  <p className="my-2 mt-3 hover:text-yellow-600 w-full h-[30px] items-center justify-center">
                     Men & Woman Fashion
                   </p>
                 </Link>
                 <Link to="/Electric">
-                  <p className="m-2 hover:text-yellow-600">
+                  <p className="my-2 hover:text-yellow-600 w-full h-[30px] items-center justify-center">
                     Electric & Appliances
                   </p>
                 </Link>
