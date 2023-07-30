@@ -78,7 +78,7 @@ function Navbar() {
         </div>
         <div className="flex flex-row items-center">
           <input
-            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 px-2 py-1 w-[220px] rounded-s-md ring-1 ring-slate-200 shadow-sm md:w-[220px] ml-4
+            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 px-2 py-1 w-[130px] rounded-s-md ring-1 ring-slate-200 shadow-sm md:w-[220px] ml-4 sm:w-[300px]
           lg:w-[490px]"
             type="text"
             ref={inputValue}
