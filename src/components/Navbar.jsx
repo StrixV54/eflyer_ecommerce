@@ -55,11 +55,11 @@ function Navbar() {
             <Bars3Icon className="h-9 w-9 text-white" />
           </button>
           <button
-            className="flex relative text-sm text-white px-3 items-center bg-black w-fit rounded-md gap-2"
+            className="flex relative text-sm text-white px-3 items-center bg-black w-fit rounded-md gap-1 md:gap-2"
             onClick={() => setIsdropdown(!isdropdown)}
           >
             All Category
-            <ChevronDownIcon className="h-4 w-4 text-white" />
+            <ChevronDownIcon className="h-3 w-3" />
             {isdropdown && (
               <div className="absolute w-[200px] justify-normal p-2 bg-white text-slate-900 -translate-x-3 z-10 translate-y-16 rounded-md">
                 <Link to="/">
@@ -78,7 +78,7 @@ function Navbar() {
         </div>
         <div className="flex flex-row items-center">
           <input
-            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 px-2 py-1 w-[130px] rounded-s-md ring-1 ring-slate-200 shadow-sm md:w-[220px] ml-4 sm:w-[300px]
+            className="focus:ring-2 focus:ring-blue-500 focus:outline-none appearance-none text-sm leading-6 text-slate-900 placeholder-slate-400 px-2 py-1 w-[130px] rounded-s-md ring-1 ring-slate-200 shadow-sm md:w-[220px] md:ml-4 ml-0 sm:w-[300px]
           lg:w-[490px]"
             type="text"
             ref={inputValue}

@@ -41,13 +41,13 @@ export default function Banner() {
         </div>
         <Navbar />
         <div className="flex relative items-center justify-center flex-col w-full">
-          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:left-0 left-2 top-28">
+          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:left-0 left-2 md:top-28 top-20">
             <ChevronLeftIcon className="h-5 w-5 text-black" />
           </button>
-          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:right-0 right-2 top-28 text-black">
+          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:right-0 right-2 md:top-28 top-20">
             <ChevronRightIcon className="h-5 w-5 text-black" />
           </button>
-          <div className="flex font-Poppins text-white flex-col items-center flex-grow">
+          <div className="flex font-Poppins text-white flex-col items-center md:pt-0 pt-10 flex-grow">
             <span className="md:text-[38px] text-[25px] pt-16">
               GET STARTED
             </span>
