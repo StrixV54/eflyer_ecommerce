@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Card from "./Card";
 
 function Section() {
   const [listItems, setListItems] = useState([]);
@@ -16,24 +17,18 @@ function Section() {
 
   return (
     <div className="flex w-full flex-col p-edge items-center">
-      <div className="font-bold text-4xl py-8">Electric Appliances</div>
-      <ul className="grid grid-flow-row grid-cols-3 justify-between gap-4">
+      <div className="font-bold md:text-4xl text-xl py-8">
+        Electric Appliances
+      </div>
+      <ul className="grid grid-flow-row grid-cols-2 md:grid-cols-3 justify-between gap-4">
         {listItems.map((item, id) => {
           return (
-            <li
-              className="bg-white shadow-lg flex p-4 flex-col items-center jus\"
+            <Card
               key={id}
-            >
-              <h2 className="h-7 overflow-hidden">{item.title}</h2>
-              <div className="pb-4">
-                <span className="text-amber-900">Price</span>
-                <span className="text-sm"> $ {item.price}</span>
-              </div>
-              <img src={item.image} className="h-[200px] w-[200px]" />
-              <button className="text-white bg-zinc-950 rounded-md p-2 my-4 border-neutral-900 border-1">
-                Add to Cart
-              </button>
-            </li>
+              price={item.price}
+              title={item.title}
+              img={item.image}
+            />
           );
         })}
       </ul>

@@ -41,10 +41,10 @@ export default function Banner() {
         </div>
         <Navbar />
         <div className="flex relative items-center justify-center flex-col w-full">
-          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute left-0 top-28">
+          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:left-0 left-2 top-28">
             <ChevronLeftIcon className="h-5 w-5 text-black" />
           </button>
-          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute right-0 top-28 text-black">
+          <button className="rounded-full flex w-10 h-10 bg-slate-200/70 items-center justify-center absolute md:right-0 right-2 top-28 text-black">
             <ChevronRightIcon className="h-5 w-5 text-black" />
           </button>
           <div className="flex font-Poppins text-white flex-col items-center flex-grow">
@@ -55,7 +55,7 @@ export default function Banner() {
               YOUR FAVOURITE SHOPPING
             </span>
           </div>
-          <button className="h-fit w-fit py-3 px-6 bg-gray-900 text-slate-100 rounded-lg align-middle font-bold">
+          <button className="h-fit w-fit py-2 px-4 md:py-3 md:px-6 bg-gray-900 text-slate-100 rounded-lg align-middle font-bold md:text-md text-[12px]">
             <Link to="/electric">BUY NOW</Link>
           </button>
         </div>
