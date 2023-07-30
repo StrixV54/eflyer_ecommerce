@@ -6,46 +6,25 @@ import {
   UserIcon,
 } from "@heroicons/react/24/solid";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 function Navbar() {
   const [isdropdown, setIsdropdown] = useState(false);
   const inputValue = useRef(null);
 
-  const [searchResults, setSearchResults] = useState([]);
-
   const nav = useNavigate();
 
   const search = async (input) => {
-    const res = await fetch(`https://fakestoreapi.com/products`);
-    const json = await res.json();
-    const out = json.filter((item) =>
-      item.description.toLowerCase().includes(input.toLowerCase())
-    );
-    nav("/", { state: { data: out, text: input } });
+    if (input.trim().length !== 0) {
+      const res = await fetch(`https://fakestoreapi.com/products`);
+      const json = await res.json();
+      const out = json.filter((item) =>
+        item.description.toLowerCase().includes(input.toLowerCase())
+      );
+      nav("/", { state: { data: out, text: input } });
+    }
   };
-
-  // const [screenSize, setScreenSize] = useState(getCurrentDimension());
-
-  // function getCurrentDimension() {
-  //   return {
-  //     width: window.innerWidth,
-  //     height: window.innerHeight,
-  //   };
-  // }
-
-  // console.log(screenSize.width);
-  // useEffect(() => {
-  //   const updateDimension = () => {
-  //     setScreenSize(getCurrentDimension());
-  //   };
-  //   window.addEventListener("resize", updateDimension);
-
-  //   return () => {
-  //     window.removeEventListener("resize", updateDimension);
-  //   };
-  // }, [screenSize]);
 
   return (
     <div className="w-full flex flex-col-reverse md:flex-row gap-3 md:gap-0 px-2  md:justify-between">
